@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms &amp; Conditions — Blue Lotus 3D Studio</title>
+  <meta name="description"
+    content="Terms and Conditions of Blue Lotus 3D Studio. Guidelines on digital file generation, verify-first rule, liability waiver, and workshop rights.">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    :root {
+      --bg-dark: #050a18;
+      --bg-card: #0b152b;
+      --card-inner: #070e1f;
+      --gold-primary: #d4af37;
+      --gold-light: #fbe285;
+      --gold-dark: #9a7828;
+      --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 30%, #b38728 70%, #fbf5b7 100%);
+      --gold-btn-gradient: linear-gradient(135deg, #d4af37 0%, #fbe285 50%, #aa771c 100%);
+      --border-gold: rgba(212, 175, 55, 0.32);
+      --border-gold-hover: rgba(251, 226, 133, 0.75);
+      --sapphire-accent: #38bdf8;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-gold: #f6d877;
+      --border-subtle: rgba(212, 175, 55, 0.16);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    .top-bar {
+      background: linear-gradient(90deg, #0a1b3a 0%, #173266 50%, #0a1b3a 100%);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      color: #e2e8f0;
+      font-size: 0.84rem;
+      padding: 8px 16px;
+      text-align: center;
+      font-weight: 500;
+    }
+    .top-bar span {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    header {
+      background: rgba(5, 10, 24, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .brand-name span {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: auto;
+    }
+
+    .nav-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #cbd5e1;
+      background: rgba(14, 30, 62, 0.65);
+      border: 1px solid var(--border-gold);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.90rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    }
+    .nav-btn:hover {
+      border-color: var(--gold-light);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+    }
+    .nav-btn svg { width: 16px; height: 16px; fill: currentColor; }
+
+    .header-actions { display: flex; align-items: center; gap: 12px; }
+    .wa-direct-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25d366;
+      color: #062b14;
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.88rem;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      transition: transform 0.2s, background 0.2s;
+    }
+    .wa-direct-btn:hover { background: #1ebc57; transform: translateY(-2px); }
+    .wa-direct-btn svg { width: 18px; height: 18px; fill: currentColor; }
+
+    /* Content Area */
+    .legal-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .legal-header {
+      text-align: center;
+      margin-bottom: 46px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      padding-bottom: 32px;
+    }
+
+    .legal-pill {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    .legal-header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 3.8vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .legal-header h1 span {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .legal-updated {
+      color: var(--gold-light);
+      font-size: 0.90rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .legal-intro {
+      background: rgba(11, 21, 43, 0.7);
+      border-left: 3px solid var(--gold-primary);
+      padding: 20px 24px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 36px;
+      font-size: 0.98rem;
+      color: #e2e8f0;
+      line-height: 1.7;
+    }
+
+    /* Clause Cards */
+    .clause-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 28px 28px;
+      margin-bottom: 22px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .clause-card:hover {
+      border-color: var(--border-gold);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+    .clause-card.highlight {
+      border: 1.5px solid var(--gold-primary);
+      background: linear-gradient(180deg, #0e1e3e 0%, #070e1f 100%);
+    }
+
+    .clause-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .clause-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--gold-btn-gradient);
+      color: #050a18;
+      font-weight: 800;
+      font-size: 0.82rem;
+      flex-shrink: 0;
+    }
+
+    .clause-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .clause-card.highlight .clause-title {
+      color: var(--gold-light);
+    }
+
+    .clause-body {
+      font-size: 0.94rem;
+      color: #cbd5e1;
+      line-height: 1.75;
+      padding-left: 40px;
+    }
+    .clause-body strong {
+      color: #ffffff;
+    }
+
+    /* Footer */
+    footer {
+      background: #03060f;
+      border-top: 1px solid var(--border-subtle);
+      padding: 40px 24px 30px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.90rem;
+      transition: color 0.2s ease;
+    }
+    .footer-links a:hover { color: var(--gold-light); }
+
+    .footer-legal {
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.82rem;
+    }
+    .footer-legal a {
+      color: var(--gold-light);
+      text-decoration: none;
+      opacity: 0.85;
+      letter-spacing: 0.4px;
+      transition: opacity 0.2s, color 0.2s;
+    }
+    .footer-legal a:hover {
+      opacity: 1;
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    .footer-legal span {
+      color: rgba(212, 175, 55, 0.4);
+      font-size: 0.75rem;
+    }
+
+    .footer-copy {
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+
+    
+    /* Mobile Bottom Navigation Bar Base (Desktop: Hidden) */
+    .mobile-bottom-nav {
+      display: none;
+    }
+
+    .wa-btn-text-full {
+      display: inline;
+    }
+
+    .wa-btn-text-mob {
+      display: none;
+    }
+
+    /* =========================================================
+       LEGAL PAGES - NATIVE MOBILE APP RESPONSIVE SYSTEM
+       ========================================================= */
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .top-bar {
+        font-size: 0.74rem;
+        padding: 6px 12px;
+        line-height: 1.35;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
+      }
+
+      .header-container {
+        padding: 10px 14px;
+        flex-direction: row !important;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .logo-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .brand-name {
+        font-size: 1.15rem;
+        letter-spacing: 0.8px;
+      }
+
+      .nav-menu {
+        display: none !important;
+      }
+
+      .header-actions {
+        margin-left: auto;
+        width: auto !important;
+      }
+
+      .wa-direct-btn {
+        padding: 7px 12px;
+        font-size: 0.8rem;
+        border-radius: 20px;
+        gap: 6px;
+        width: auto !important;
+      }
+
+      .wa-btn-text-full {
+        display: none;
+      }
+
+      .wa-btn-text-mob {
+        display: inline;
+      }
+
+      .legal-container {
+        padding: 24px 14px 44px;
+      }
+
+      .legal-header h1 {
+        font-size: 1.75rem;
+        line-height: 1.25;
+      }
+
+      .clause-card {
+        padding: 18px 14px;
+      }
+
+      .clause-body {
+        padding-left: 0;
+        margin-top: 10px;
+        font-size: 0.88rem;
+      }
+
+      footer {
+        padding: 30px 14px 18px;
+      }
+
+      .footer-links {
+        gap: 12px;
+        font-size: 0.84rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Fixed Mobile Bottom App Tab Navigation Bar */
+      .mobile-bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: rgba(6, 12, 26, 0.94);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border-top: 1px solid var(--border-gold);
+        z-index: 999;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 4px calc(env(safe-area-inset-bottom, 0px));
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.65);
+      }
+
+      .mob-nav-btn {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #94a3b8;
+        text-decoration: none;
+        padding: 6px 0;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        transition: all 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+
+      .mob-nav-icon {
+        width: 22px;
+        height: 22px;
+        margin-bottom: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease;
+      }
+
+      .mob-nav-icon svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+      }
+
+      .mob-nav-btn.active {
+        color: var(--gold-light);
+      }
+
+      .mob-nav-btn.active .mob-nav-icon {
+        transform: translateY(-2px);
+      }
+
+      .mob-nav-btn.active .mob-nav-icon svg {
+        fill: var(--gold-light);
+        filter: drop-shadow(0 0 6px rgba(251, 226, 133, 0.6));
+      }
+
+      .mob-nav-btn:active {
+        transform: scale(0.94);
+      }
+
+      .wa-icon-highlight svg {
+        fill: var(--wa-green) !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    👑 Blue Lotus 3D Studio — <span>Official Legal Policies & Workshop Protection Framework</span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="header-container">
+      <a href="index.html#top" class="logo-group">
+        <div class="logo-icon">
+          <img src="blue_lotus_logo.png" alt="Blue Lotus 3D Studio Emblem"
+            style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.45));">
+        </div>
+        <div>
+          <div class="brand-name">BLUE <span>LOTUS</span></div>
+          <div style="font-size: 0.72rem; color: var(--gold-light); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;">3D CNC Carving Studio</div>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="index.html#top" class="nav-btn" id="navHomeBtn">
+          <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          Home
+        </a>
+        <a href="index.html#shelf" class="nav-btn" id="navShelfBtn">
+          <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm10 0a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V5zM3 15a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4zm10 0a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4z"/></svg>
+          Shelf
+        </a>
+        <a href="services.html" class="nav-btn" id="navServicesBtn">
+          <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+          Services
+        </a>
+      </nav>
+
+      <!-- WhatsApp Action -->
+      <div class="header-actions">
+        <a href="https://wa.me/918317526432?text=Hello%20Blue%20Lotus%20Studio!%20I%20have%20a%20legal/service%20inquiry."
+          class="wa-direct-btn" target="_blank">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z" />
+          </svg>
+          <span class="wa-btn-text-full">Chat on WhatsApp</span>
+          <span class="wa-btn-text-mob">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal-container">
+    <div class="legal-header">
+      <div class="legal-pill">Workshop Legal Framework</div>
+      <h1>Terms &amp; <span>Conditions</span></h1>
+      <div class="legal-updated">Last Updated: November 2026</div>
+    </div>
+
+    <div class="legal-intro">
+      Welcome to <strong>Blue Lotus 3D Studio</strong> ("Platform"). By submitting images, custom details, or machine files to our platform via our website, WhatsApp, or Telegram gateways, you agree to comply with the following rules:
+    </div>
+
+    <!-- Clause 1 -->
+    <div class="clause-card">
+      <div class="clause-header">
+        <span class="clause-badge">1</span>
+        <h2 class="clause-title">Nature of Service</h2>
+      </div>
+      <div class="clause-body">
+        Blue Lotus 3D Studio is an automated, AI-driven asset generation platform. We provide custom 3D digital design meshes (<strong>.STL</strong>), depth heightmaps (<strong>.TIFF</strong>), and supplementary machine codes (<strong>.TAP / .NC</strong>). <strong>We do not manufacture physical products, nor do we operate physical machinery.</strong>
+      </div>
+    </div>
+
+    <!-- Clause 2 -->
+    <div class="clause-card highlight">
+      <div class="clause-header">
+        <span class="clause-badge">2</span>
+        <h2 class="clause-title">The Golden Rule ("Verify First")</h2>
+      </div>
+      <div class="clause-body">
+        Before loading any digital asset provided by our platform onto an industrial CNC router or execution machine, <strong>you must open, inspect, and verify the file profile inside your own desktop CAM software</strong> (such as ArtCAM, Vectric Aspire, or Carveco). You are solely responsible for ensuring the design relief, dimensions, and curves match your physical timber and material requirements.
+      </div>
+    </div>
+
+    <!-- Clause 3 -->
+    <div class="clause-card highlight">
+      <div class="clause-header">
+        <span class="clause-badge">3</span>
+        <h2 class="clause-title">Absolute Liability Waiver</h2>
+      </div>
+      <div class="clause-body">
+        Blue Lotus 3D Studio shall never be held liable for any physical damage, financial losses, or operational disruptions occurring at your workshop. This includes, but is not limited to: <strong>snapped router bits, overheated spindle motors, machine collisions, material wastage (such as ruined teakwood or MDF planks), or missed client deadlines</strong>. Your use of our files is at your own mechanical risk.
+      </div>
+    </div>
+
+    <!-- Clause 4 -->
+    <div class="clause-card">
+      <div class="clause-header">
+        <span class="clause-badge">4</span>
+        <h2 class="clause-title">The Satisfaction &amp; Modification Guarantee</h2>
+      </div>
+      <div class="clause-body">
+        We operate on a strict <strong>"Satisfy Before Pay"</strong> model. If a generated file contains design flaws or scale issues during your software check, <strong>we will modify and regenerate the digital file within minutes</strong>. You are only required to complete payment once you have manually verified the file looks correct on your software screen.
+      </div>
+    </div>
+
+    <!-- Clause 5 -->
+    <div class="clause-card">
+      <div class="clause-header">
+        <span class="clause-badge">5</span>
+        <h2 class="clause-title">Intellectual Property Rights</h2>
+      </div>
+      <div class="clause-body">
+        All standard visual catalogue items displayed on our showroom platform belong to Blue Lotus 3D Studio. When you purchase a package, <strong>you receive a license to carve that file on your physical workshop routers</strong>. You are strictly prohibited from reselling, uploading to public Telegram groups, or sharing our digital source files (.STL, .TIFF, .TAP) with external design competitors.
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#shelf">Design Shelf</a>
+      <a href="services.html">Services</a>
+      <a href="https://wa.me/918317526432" target="_blank">WhatsApp Support</a>
+    </div>
+    <div class="footer-legal">
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <span>&bull;</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Blue Lotus 3D Studio &bull; Custom 3D .STL Files for CNC Wood Carving</div>
+  </footer>
+
+</body>
+</html>

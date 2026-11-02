@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Lotus 3D Studio — Custom 3D CNC Relief & ArtCAM Models</title>
+  <meta name="description"
+    content="Exclusive 3D STL & 16-bit TIFF CNC wood carving designs for Doors, Pooja Mandirs, Panels, and Furniture. Fast custom photo-to-3D service.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel=" icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      /* Royal Sapphire & Imperial Gold Palette */
+      --bg-dark: #050a18;
+      --bg-card: #0b152b;
+      --bg-card-hover: #101f3f;
+      --card-inner: #070e1f;
+
+      /* Imperial Gold Tones */
+      --gold-primary: #d4af37;
+      --gold-light: #fbe285;
+      --gold-dark: #9a7828;
+      --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 30%, #b38728 70%, #fbf5b7 100%);
+      --gold-btn-gradient: linear-gradient(135deg, #d4af37 0%, #fbe285 50%, #aa771c 100%);
+      --gold-glow: rgba(212, 175, 55, 0.35);
+      --border-gold: rgba(212, 175, 55, 0.32);
+      --border-gold-hover: rgba(251, 226, 133, 0.75);
+
+      /* Royal Sapphire Accents */
+      --sapphire-accent: #38bdf8;
+      --sapphire-deep: #1d4ed8;
+      --sapphire-glow: rgba(56, 189, 248, 0.25);
+      --sapphire-gradient: linear-gradient(135deg, #1e3a8a 0%, #0369a1 100%);
+
+      /* Text Colors */
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-gold: #f6d877;
+      --border-subtle: rgba(212, 175, 55, 0.16);
+
+      /* WhatsApp */
+      --wa-green: #25d366;
+      --wa-green-hover: #1ebc57;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 0%, #0f2347 0%, #060b17 55%, #03060d 100%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Top Announcement Bar */
+    .top-bar {
+      background: linear-gradient(90deg, #071329 0%, #10264f 50%, #071329 100%);
+      border-bottom: 1px solid var(--border-gold);
+      color: #e0f2fe;
+      font-size: 0.85rem;
+      padding: 9px 16px;
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+    }
+
+    .top-bar span {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+
+    /* Header */
+    header {
+      background: rgba(6, 11, 23, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    .logo-icon {
+      width: 46px;
+      height: 46px;
+      background: transparent;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.5));
+    }
+
+    .brand-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.38rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: #ffffff;
+    }
+
+    .brand-name span {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+    }
+
+    /* Header Navigation (Home, Shelf & Services Buttons) */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: auto; /* Moves buttons to the right, directly to the left of WhatsApp */
+    }
+
+    .nav-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #cbd5e1;
+      background: rgba(14, 30, 62, 0.65);
+      border: 1px solid var(--border-gold);
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      cursor: pointer;
+      overflow: hidden;
+      z-index: 1;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    /* Smooth Gradient Fade Layer */
+    .nav-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gold-btn-gradient);
+      opacity: 0;
+      z-index: -1;
+      border-radius: 7px;
+      transition: opacity 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-btn:hover {
+      border-color: var(--gold-light);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+    }
+
+    .nav-btn.active {
+      color: #060b17;
+      font-weight: 700;
+      border-color: rgba(251, 226, 133, 0.9);
+      box-shadow: 0 3px 14px rgba(212, 175, 55, 0.45);
+    }
+
+    .nav-btn.active::before {
+      opacity: 1;
+    }
+
+    .nav-btn svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+      transition: fill 0.3s ease;
+      flex-shrink: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .wa-direct-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #25d366 0%, #1ebc57 100%);
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .wa-direct-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
+      filter: brightness(1.08);
+    }
+
+    .wa-direct-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 72px 24px 52px;
+      text-align: center;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      padding: 7px 18px;
+      border-radius: 24px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 22px;
+      box-shadow: 0 0 18px rgba(212, 175, 55, 0.18);
+    }
+
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.9rem;
+      line-height: 1.22;
+      margin-bottom: 22px;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h1 span {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 35px rgba(212, 175, 55, 0.3);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      margin-bottom: 34px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold-btn-gradient);
+      color: #060b17;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.4px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 26px rgba(212, 175, 55, 0.55);
+      filter: brightness(1.08);
+    }
+
+    .btn-secondary {
+      background: rgba(14, 30, 62, 0.6);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(29, 78, 216, 0.25);
+      border-color: var(--gold-light);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(56, 189, 248, 0.25);
+    }
+
+    /* Trust Stats Bar */
+    .trust-bar {
+      max-width: 1100px;
+      margin: 20px auto 52px;
+      padding: 0 24px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      background: linear-gradient(145deg, #0b152b 0%, #060c1a 100%);
+      border: 1px solid var(--border-gold);
+      border-radius: 14px;
+      padding: 26px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .trust-item h3 {
+      font-size: 1.65rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .trust-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      font-weight: 600;
+    }
+
+    /* Shelf Section */
+    .shelf-section {
+      scroll-margin-top: 90px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 36px 24px 68px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .section-title h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.1rem;
+      color: #ffffff;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .section-title h2 span {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Category Filters with Smooth Transition */
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      background: rgba(11, 20, 38, 0.8);
+      padding: 6px;
+      border-radius: 10px;
+      border: 1px solid var(--border-gold);
+      backdrop-filter: blur(8px);
+    }
+
+    .filter-btn {
+      position: relative;
+      background: transparent;
+      border: 1px solid transparent;
+      color: #cbd5e1;
+      padding: 8px 16px;
+      border-radius: 7px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+      overflow: hidden;
+      z-index: 1;
+      transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    /* Smooth Gradient Fade Layer for Filters */
+    .filter-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gold-btn-gradient);
+      opacity: 0;
+      z-index: -1;
+      border-radius: 6px;
+      transition: opacity 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .filter-btn:hover {
+      color: var(--gold-light);
+      background: rgba(212, 175, 55, 0.1);
+      border-color: rgba(212, 175, 55, 0.35);
+    }
+
+    .filter-btn:active {
+      transform: scale(0.97);
+    }
+
+    .filter-btn.active {
+      color: #060b17;
+      font-weight: 700;
+      border-color: rgba(251, 226, 133, 0.85);
+      box-shadow: 0 2px 14px rgba(212, 175, 55, 0.35);
+    }
+
+    .filter-btn.active::before {
+      opacity: 1;
+    }
+
+    /* Gallery Grid */
+    .shelf-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    /* Design Card */
+    .design-card {
+      background: linear-gradient(160deg, #0d1933 0%, #070e1e 100%);
+      border: 1px solid var(--border-gold);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    }
+
+    .design-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-gold-hover);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), 0 0 24px rgba(212, 175, 55, 0.22);
+    }
+
+    .card-img-wrap {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      background: #050a17;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .design-card:hover .card-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .badge-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(6, 11, 23, 0.9);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .format-pills {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .format-pill {
+      background: rgba(7, 14, 30, 0.85);
+      backdrop-filter: blur(4px);
+      color: #e2e8f0;
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    .card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+      line-height: 1.4;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .card-specs {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .card-specs span strong {
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .card-footer {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .order-wa-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: linear-gradient(135deg, #25d366 0%, #1ebc57 100%);
+      color: #ffffff;
+      padding: 12px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .order-wa-btn:hover {
+      filter: brightness(1.08);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .order-wa-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* Custom Photo-to-3D Banner */
+    .custom-service-banner {
+      max-width: 1200px;
+      margin: 20px auto 68px;
+      padding: 0 24px;
+    }
+
+    .service-card {
+      background: linear-gradient(135deg, #0e1e3e 0%, #060c1a 100%);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 18px;
+      padding: 44px 36px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55), inset 0 0 35px rgba(212, 175, 55, 0.06);
+      position: relative;
+    }
+
+    .service-info h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      color: #ffffff;
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    .service-info h2 span {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .service-info p {
+      color: #cbd5e1;
+      font-size: 1rem;
+      margin-bottom: 26px;
+    }
+
+    .service-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.94rem;
+      color: #e2e8f0;
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.82rem;
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+    }
+
+    .service-action-box {
+      background: rgba(6, 12, 26, 0.85);
+      border: 1px solid var(--border-gold);
+      border-radius: 14px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .service-action-box h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .service-action-box p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    /* Footer */
+    footer {
+      background: #03060f;
+      border-top: 1px solid var(--border-gold);
+      padding: 40px 24px 30px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.90rem;
+      transition: color 0.2s ease;
+    }
+
+    
+    .footer-legal {
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.82rem;
+    }
+
+    .footer-legal a {
+      color: var(--gold-light);
+      text-decoration: none;
+      opacity: 0.85;
+      letter-spacing: 0.4px;
+      transition: opacity 0.2s, color 0.2s;
+    }
+
+    .footer-legal a:hover {
+      opacity: 1;
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .footer-legal span {
+      color: rgba(212, 175, 55, 0.4);
+      font-size: 0.75rem;
+    }
+
+    .footer-copy {
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    /* Mobile Bottom Navigation Bar Base (Desktop: Hidden) */
+    .mobile-bottom-nav {
+      display: none;
+    }
+
+    .wa-btn-text-full {
+      display: inline;
+    }
+
+    .wa-btn-text-mob {
+      display: none;
+    }
+
+    /* =========================================================
+       NATIVE MOBILE APP RESPONSIVE SYSTEM (Mobile & Tablet)
+       ========================================================= */
+    @media (max-width: 768px) {
+      html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        position: relative;
+      }
+
+      body {
+        padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      /* Compact Top App Bar */
+      .top-bar {
+        font-size: 0.72rem;
+        padding: 6px 10px;
+        line-height: 1.35;
+        white-space: normal;
+        text-align: center;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
+      }
+
+      .header-container {
+        padding: 8px 12px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .logo-group {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        min-width: 0 !important;
+        flex-shrink: 1 !important;
+        overflow: hidden !important;
+      }
+
+      .logo-icon {
+        width: 34px !important;
+        height: 34px !important;
+        flex-shrink: 0 !important;
+      }
+
+      .brand-name {
+        font-size: 1.05rem !important;
+        letter-spacing: 0.8px !important;
+        white-space: nowrap !important;
+        line-height: 1.2 !important;
+      }
+
+      .logo-group div div:last-child {
+        font-size: 0.62rem !important;
+        letter-spacing: 0.8px !important;
+        white-space: nowrap !important;
+      }
+
+      /* Hide Desktop Nav Buttons from Top Header on Mobile (Handled by Bottom Bar) */
+      .nav-menu {
+        display: none !important;
+      }
+
+      /* Compact WhatsApp Action in Top App Bar */
+      .header-actions {
+        margin-left: auto !important;
+        flex-shrink: 0 !important;
+      }
+
+      .wa-direct-btn {
+        padding: 6px 12px !important;
+        font-size: 0.80rem !important;
+        border-radius: 20px !important;
+        gap: 6px !important;
+        white-space: nowrap !important;
+      }
+
+      .wa-btn-text-full {
+        display: none !important;
+      }
+
+      .wa-btn-text-mob {
+        display: inline !important;
+      }
+
+      /* Hero Section Mobile App Sizing */
+      .hero {
+        padding: 26px 14px 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+      }
+
+      .hero-badge {
+        font-size: 0.70rem !important;
+        padding: 4px 12px !important;
+        margin-bottom: 12px !important;
+      }
+
+      .hero h1 {
+        font-size: 1.65rem !important;
+        line-height: 1.25 !important;
+        letter-spacing: 0.2px !important;
+        margin-bottom: 12px !important;
+        word-break: break-word !important;
+      }
+
+      .hero p {
+        font-size: 0.90rem !important;
+        line-height: 1.45 !important;
+        margin-bottom: 18px !important;
+      }
+
+      .hero-cta-group {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
+      }
+
+      .hero-cta-group .btn-primary,
+      .hero-cta-group .btn-secondary {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 12px 18px !important;
+        font-size: 0.90rem !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Trust Bar on Mobile */
+      .trust-bar {
+        margin: 8px auto 26px !important;
+        padding: 0 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+        padding: 12px 8px !important;
+      }
+
+      .trust-item h3 {
+        font-size: 1.15rem !important;
+      }
+
+      .trust-item p {
+        font-size: 0.70rem !important;
+        letter-spacing: 0.2px !important;
+      }
+
+      /* Shelf Section & Category Filters */
+      .shelf-section {
+        padding: 24px 12px 36px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+      }
+
+      .section-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        margin-bottom: 20px !important;
+      }
+
+      .section-title {
+        width: 100% !important;
+      }
+
+      .section-title h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.25 !important;
+      }
+
+      .section-title p {
+        font-size: 0.85rem !important;
+      }
+
+      /* Horizontal Swipeable Category Chips (Play Store / App Store style) */
+      .filters {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        padding: 6px 4px !important;
+        gap: 8px !important;
+        border-radius: 30px !important;
+        justify-content: flex-start !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      .filters::-webkit-scrollbar {
+        display: none !important;
+      }
+
+      .filter-btn {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        padding: 7px 14px !important;
+        font-size: 0.80rem !important;
+        border-radius: 20px !important;
+        touch-action: manipulation !important;
+      }
+
+      /* Shelf Grid on Mobile Phones: Fluid 1-Column Native Cards */
+      .shelf-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .design-card {
+        border-radius: 14px !important;
+        overflow: hidden !important;
+      }
+
+      .card-img-wrap {
+        height: 220px !important;
+      }
+
+      .card-body {
+        padding: 15px 13px !important;
+      }
+
+      .card-title {
+        font-size: 1.02rem !important;
+        line-height: 1.35 !important;
+      }
+
+      .card-specs {
+        font-size: 0.80rem !important;
+        gap: 5px !important;
+      }
+
+      .order-wa-btn {
+        padding: 12px 14px !important;
+        font-size: 0.90rem !important;
+        width: 100% !important;
+        justify-content: center !important;
+      }
+
+      /* Custom Photo-to-3D Service Banner */
+      .custom-service-banner {
+        padding: 0 12px 32px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .service-card {
+        grid-template-columns: 1fr !important;
+        padding: 20px 14px !important;
+        gap: 20px !important;
+        border-radius: 14px !important;
+      }
+
+      .service-info h2 {
+        font-size: 1.40rem !important;
+        line-height: 1.3 !important;
+      }
+
+      .service-info p {
+        font-size: 0.86rem !important;
+      }
+
+      .service-steps {
+        gap: 10px !important;
+        margin: 16px 0 !important;
+      }
+
+      .step-item {
+        font-size: 0.84rem !important;
+        gap: 8px !important;
+      }
+
+      .step-num {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 0.80rem !important;
+      }
+
+      .service-info .btn-primary {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 12px !important;
+        font-size: 0.88rem !important;
+      }
+
+      .service-action-box {
+        padding: 20px 14px !important;
+        border-radius: 12px !important;
+      }
+
+      /* Footer on Mobile */
+      footer {
+        padding: 28px 12px 16px !important;
+      }
+
+      .footer-links {
+        gap: 10px !important;
+        font-size: 0.82rem !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+      }
+
+      /* Fixed Mobile Bottom App Tab Navigation Bar */
+      .mobile-bottom-nav {
+        display: flex !important;
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+        height: 58px !important;
+        background: rgba(6, 12, 26, 0.96) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        border-top: 1px solid var(--border-gold) !important;
+        z-index: 9999 !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        padding: 0 4px calc(env(safe-area-inset-bottom, 0px)) !important;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7) !important;
+        overflow: hidden !important;
+      }
+
+      .mob-nav-btn {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        color: #94a3b8 !important;
+        text-decoration: none !important;
+        padding: 4px 0 !important;
+        font-size: 0.70rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.2px !important;
+        transition: all 0.2s ease !important;
+        -webkit-tap-highlight-color: transparent !important;
+        touch-action: manipulation !important;
+      }
+
+      .mob-nav-icon {
+        width: 22px !important;
+        height: 22px !important;
+        margin-bottom: 2px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: transform 0.2s ease !important;
+      }
+
+      .mob-nav-icon svg {
+        width: 19px !important;
+        height: 19px !important;
+        fill: currentColor !important;
+      }
+
+      .mob-nav-btn.active {
+        color: var(--gold-light) !important;
+      }
+
+      .mob-nav-btn.active .mob-nav-icon {
+        transform: translateY(-2px) !important;
+      }
+
+      .mob-nav-btn.active .mob-nav-icon svg {
+        fill: var(--gold-light) !important;
+        filter: drop-shadow(0 0 6px rgba(251, 226, 133, 0.6)) !important;
+      }
+
+      .mob-nav-btn:active {
+        transform: scale(0.94) !important;
+      }
+
+      .wa-icon-highlight svg {
+        fill: var(--wa-green) !important;
+      }
+    }
+
+    /* Tablet breakpoint (2 columns) */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .shelf-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <!-- Top Announcement -->
+  <div class="top-bar">
+    ✨ Fast Delivery: <span>Photo-to-3D Relief in under 2 hours</span> | Ready for ArtCAM & All CNC Routers
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="#top" class="logo-group" onclick="scrollToTop(event)">
+        <div class="logo-icon">
+          <img src="blue_lotus_logo.png" alt="Blue Lotus 3D Studio Emblem"
+            style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.45));">
+        </div>
+        <div>
+          <div class="brand-name">BLUE <span>LOTUS</span></div>
+          <div
+            style="font-size: 0.72rem; color: var(--gold-light); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;">
+            3D
+            CNC Carving Studio</div>
+        </div>
+      </a>
+
+      <!-- Home, Shelf & Services Navigation Buttons -->
+                  <nav class="nav-menu">
+        <a href="#top" class="nav-btn active" id="navHomeBtn" onclick="scrollToTop(event)">
+          <svg viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          Home
+        </a>
+        <a href="#shelf" class="nav-btn" id="navShelfBtn" onclick="scrollToShelf(event)">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M3 5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm10 0a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V5zM3 15a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4zm10 0a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4z" />
+          </svg>
+          Shelf
+        </a>
+        <a href="services.html" class="nav-btn" id="navServicesBtn">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
+          </svg>
+          Services
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/918317526432?text=Hello%20Blue%20Lotus%20Studio!%20I%20want%20to%20inquire%20about%203D%20CNC%20carving%20designs."
+          class="wa-direct-btn" target="_blank" aria-label="WhatsApp Contact">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z" />
+          </svg>
+          <span class="wa-btn-text-full">Chat on WhatsApp</span>
+          <span class="wa-btn-text-mob">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+    <!-- Hero Section -->
+  <section class="hero">
+    <div class=" hero-badge">👑 Artisanal 3D CNC Studio</div>
+    <h1>Turn Any Sketch or Photo Into <span>High-Precision 3D .STL Files</span></h1>
+    <p>Exclusive, high-density 3D relief models (.STL) and 16-bit Heightmaps (.TIFF) optimized for your ArtCAM & Aspire software.</p>
+    <div class="hero-cta-group">
+      <a href="#shelf" class="btn-primary" onclick="scrollToShelf(event)">Browse Design Shelf</a>
+      <a href="#custom-service" class="btn-secondary">Send Your Custom Photo</a>
+    </div>
+  </section>
+
+  <!-- Trust Stats -->
+  <section class="trust-bar">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <h3>100%</h3>
+        <p>ArtCAM & Aspire Ready</p>
+      </div>
+      <div class="trust-item">
+        <h3>.STL & .TIFF</h3>
+        <p>Premium 3D Design Assets</p>
+      </div>
+      <div class="trust-item">
+        <h3>&lt; 2 Hours</h3>
+        <p>Custom Turnaround Time</p>
+      </div>
+      <div class="trust-item">
+        <h3>Zero Lag</h3>
+        <p>Fast AI Asset Generation</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Shelf Gallery -->
+  <section id="shelf" class="shelf-section">
+    <div class="section-header">
+      <div class="section-title">
+        <h2>The <span>Design Shelf</span></h2>
+        <p>Explore exclusive, ready-to-carve 3D relief models. Click to order directly on WhatsApp.</p>
+      </div>
+
+      <!-- Filters with Smooth Cross-Fade Transitions -->
+      <div class="filters">
+        <button class="filter-btn active" id="filterAllBtn" onclick="filterCategory('all', this)">All Designs</button>
+        <button class="filter-btn" onclick="filterCategory('Door Corners', this)">Door Corners</button>
+        <button class="filter-btn" onclick="filterCategory('Center Panels', this)">Center Panels</button>
+        <button class="filter-btn" onclick="filterCategory('Pooja Mandir', this)">Pooja Mandir</button>
+        <button class="filter-btn" onclick="filterCategory('Nameplates & Welcome Plaques', this)">Nameplates &
+          Plaques</button>
+        <button class="filter-btn" onclick="filterCategory('Borders', this)">Borders</button>
+      </div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="shelf-grid" id="designGrid">
+      <!-- Designs rendered dynamically via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Custom Photo-to-3D Service Banner -->
+  <section id="custom-service" class="custom-service-banner">
+    <div class="service-card">
+      <div class="service-info">
+        <h2>Have a <span>Door or Furniture Photo</span>?</h2>
+        <p>Send us any photo from WhatsApp, Pinterest, or a client site. We reverse-engineer and deliver ready-to-carve
+          clean 3D .STL & 16-bit TIFF files for your CNC router.</p>
+
+        <div class=" service-steps">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div>Send your photo or sketch to our WhatsApp</div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div>We extract, clean, and build deep organic 3D relief (10mm depth)</div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div>Receive verified .STL & 16-bit TIFF files to verify in your software</div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/918317526432?text=Hello%20Blue%20Lotus!%20I%20have%20a%20door/carving%20photo.%20Can%20you%20convert%20it%20to%203D%20STL%20for%20my%20CNC%20machine%3F"
+          class="btn-primary" target="_blank">
+          Send Your Photo on WhatsApp
+        </a>
+      </div>
+
+      <div class="service-action-box">
+        <div style="font-size: 2.2rem; margin-bottom: 8px;">📲</div>
+        <h4>Instant WhatsApp Support</h4>
+        <p>Connect directly with our master 3D relief CAM designer.</p>
+        <div
+          style="font-family: 'Cinzel', serif; font-size: 1.25rem; color: var(--gold-light); font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px;">
+          +91 8317526432
+        </div>
+        <div style="font-size: 0.8rem; color: #94a3b8; font-weight: 600;">Available 7 Days a Week</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#shelf">Design Shelf</a>
+      <a href="services.html">Services</a>
+      <a href="https://wa.me/918317526432" target="_blank">WhatsApp Support</a>
+    </div>
+    <div class="footer-legal">
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <span>&bull;</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Blue Lotus 3D Studio &bull; Custom 3D .STL Files for CNC Wood Carving</div>
+  </footer>
+
+  <script>
+    // Smooth Navigation Handlers without Scroll-Spy Glitches
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.location.hash === '#shelf') {
+        setTimeout(() => {
+          scrollToShelf();
+        }, 120);
+      }
+    });
+
+    let isAutoScrolling = false;
+    let autoScrollTimer = null;
+
+    function scrollToTop(e) {
+      if (e) e.preventDefault();
+      isAutoScrolling = true;
+      updateActiveNav('navHomeBtn');
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      clearTimeout(autoScrollTimer);
+      autoScrollTimer = setTimeout(() => {
+        isAutoScrolling = false;
+      }, 850);
+    }
+
+    function scrollToShelf(e) {
+      if (e) e.preventDefault();
+
+      // Automatically reset category filter to 'All Designs'
+      const allBtn = document.getElementById("filterAllBtn");
+      if (allBtn && !allBtn.classList.contains("active")) {
+        filterCategory('all', allBtn);
+      }
+
+      const shelf = document.getElementById("shelf");
+      if (shelf) {
+        isAutoScrolling = true;
+        updateActiveNav('navShelfBtn');
+        const headerOffset = 85;
+        const elementPosition = shelf.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+        clearTimeout(autoScrollTimer);
+        autoScrollTimer = setTimeout(() => {
+          isAutoScrolling = false;
+        }, 850);
+      }
+    }
+
+    function updateActiveNav(activeId) {
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.mob-nav-btn').forEach(btn => btn.classList.remove('active'));
+
+      if (activeId === 'navHomeBtn' || activeId === 'mobNavHomeBtn' || activeId === 'home') {
+        const d = document.getElementById('navHomeBtn'); if (d) d.classList.add('active');
+        const m = document.getElementById('mobNavHomeBtn'); if (m) m.classList.add('active');
+      } else if (activeId === 'navShelfBtn' || activeId === 'mobNavShelfBtn' || activeId === 'shelf') {
+        const d = document.getElementById('navShelfBtn'); if (d) d.classList.add('active');
+        const m = document.getElementById('mobNavShelfBtn'); if (m) m.classList.add('active');
+      } else if (activeId === 'navServicesBtn' || activeId === 'mobNavServicesBtn' || activeId === 'services') {
+        const d = document.getElementById('navServicesBtn'); if (d) d.classList.add('active');
+        const m = document.getElementById('mobNavServicesBtn'); if (m) m.classList.add('active');
+      }
+    }
+
+    // Scroll spy for active navbar state (runs only during natural user scrolling)
+    window.addEventListener('scroll', () => {
+      if (isAutoScrolling) return; // Prevent flickering when smooth scrolling triggered by button
+      const shelf = document.getElementById("shelf");
+      if (shelf) {
+        const shelfTop = shelf.getBoundingClientRect().top;
+        if (shelfTop <= 160) {
+          updateActiveNav('navShelfBtn');
+        } else {
+          updateActiveNav('navHomeBtn');
+        }
+      }
+    }, { passive: true });
+
+    // Initial Stock Designs
+    const defaultDesigns = [
+      {
+        id: "BL-01",
+        title: "Classical Acanthus Door Corner #01",
+        category: "Door Corners",
+        specs: "180mm × 235mm × 10mm Depth",
+        tag: "Exclusive",
+        image: "door_corner_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-02",
+        title: "Royal Peacock Door Center Panel #02",
+        category: "Center Panels",
+        specs: "300mm x 430mm x 12.0mm Depth",
+        tag: "Bestseller",
+        image: "peacock_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-03",
+        title: "Vasudeva & Bal Krishna Temple Door Panel #03",
+        category: "Pooja Mandir",
+        specs: "400mm x 600mm x 15.0mm Depth",
+        tag: "Masterpiece",
+        image: "krishna_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-04",
+        title: "Modern Luxury Chevron & Faceted Diamond Door #04",
+        category: "Center Panels",
+        specs: "800mm × 1500mm × 18mm Stock (10.5mm Relief)",
+        tag: "Modern Luxury",
+        image: "diamond_door_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-05",
+        title: "Royal Baroque Nameplate & Welcome Plaque (\"Yamunaa\")",
+        category: "Nameplates & Welcome Plaques",
+        specs: "300mm × 300mm × 12mm Depth (Customizable Name)",
+        tag: "Bestseller Plaque",
+        image: "yamunaa_plaque_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-06",
+        title: "Twin Imperial Koi Fish Harmony Panel #06",
+        category: "Center Panels",
+        specs: "300mm x 450mm x 7.5mm Depth (Vastu & Feng Shui)",
+        tag: "Prosperity Bestseller",
+        image: "koi_fish_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-07",
+        title: "Royal Guardian Lions & Golden Sun Lotus Crest #07",
+        category: "Center Panels",
+        specs: "300mm x 300mm x 10.0mm Depth (Main Door & Temple Pediment)",
+        tag: "Royal Masterpiece",
+        image: "lion_crest_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-08",
+        title: "Sacred Temple Annapakshi Pedestal Panel #08",
+        category: "Pooja Mandir",
+        specs: "300mm x 320mm x 10.0mm Depth (Temple Architecture)",
+        tag: "Auspicious Heritage",
+        image: "annapakshi_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-09",
+        title: "Classical Peony Bouquet & Lattice Urn Panel #09",
+        category: "Center Panels",
+        specs: "300mm x 450mm x 10.0mm Depth (Wardrobe & Cabinet Inserts)",
+        tag: "Classical Still Life",
+        image: "floral_vase_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-10",
+        title: "Lord Venkateswara Temple Door Arch Pediment #10",
+        category: "Pooja Mandir",
+        specs: "450mm x 300mm x 12.0mm Depth (Sacred Crown Archtop)",
+        tag: "Sacred Temple Crown",
+        image: "venkateswara_arch_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-11",
+        title: "Royal Baroque Radhe Krishna Devotional Nameplate #11",
+        category: "Nameplates & Welcome Plaques",
+        specs: "450mm x 300mm x 8.5mm Depth (Custom Entrance Crest)",
+        tag: "Devotional Bestseller",
+        image: "radhe_krishna_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-12",
+        title: "Bal Shiva on Sacred Nandi Door Panel #12",
+        category: "Pooja Mandir",
+        specs: "300mm x 450mm x 12.0mm Depth (Shaivite Heritage Panel)",
+        tag: "Divine Masterpiece",
+        image: "bal_shiva_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-13",
+        title: "Radha Krishna on Floral Swing (Jhula) Door & Wall Panel #13",
+        category: "Pooja Mandir",
+        specs: "300mm x 450mm x 12.0mm Depth (Vaishnavite Heritage Panel)",
+        tag: "Devotional Masterpiece",
+        image: "radha_krishna_jhula_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-14",
+        title: "Lord Ram Embracing Bhakt Hanuman (Ram-Hanuman Milap) Panel #14",
+        category: "Pooja Mandir",
+        specs: "300mm x 450mm x 12.0mm Depth (Ramayana Heritage Panel)",
+        tag: "Divine Devotion",
+        image: "ram_hanuman_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-15",
+        title: "Imperial Guilloche Rosette & Pearl Running Border #15",
+        category: "Borders",
+        specs: "600mm x 200mm x 10.0mm Depth (Architectural Frieze Molding)",
+        tag: "Architectural Trim",
+        image: "guilloche_border_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-16",
+        title: "Classical Baroque Acanthus Scroll & Pearl Border #16",
+        category: "Borders",
+        specs: "600mm x 125mm x 10.0mm Depth (Running Frieze Molding)",
+        tag: "Baroque Luxury",
+        image: "acanthus_border_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-17",
+        title: "Royal Temple Pillar & Lotus Vine Door Jambs #17",
+        category: "Borders",
+        specs: "320mm x 1200mm x 15.0mm Depth (Matched Symmetrical Pair)",
+        tag: "Temple Heritage Pair",
+        image: "temple_pillars_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-18",
+        title: "Classical Urn & Royal Peacock Double Door Panels #18",
+        category: "Center Panels",
+        specs: "350mm x 1000mm x 15.0mm Depth (Matched Symmetrical Pair)",
+        tag: "Double Door Masterpiece",
+        image: "peacock_urn_doors_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-19",
+        title: "Geometric Basketweave & Floral Arc Door Panel #19",
+        category: "Center Panels",
+        specs: "400mm x 980mm x 15.0mm Depth (Contemporary Architectural Panel)",
+        tag: "Contemporary Classic",
+        image: "basketweave_door_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-20",
+        title: "Sacred Kamadhenu & Mangal Kalash Pooja Door Panel #20",
+        category: "Pooja Mandir",
+        specs: "400mm x 1000mm x 15.0mm Depth (Traditional Mandir Heritage)",
+        tag: "Divine Auspiciousness",
+        image: "kamadhenu_kalash_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-21",
+        title: "Baroque Floral Scroll & Acanthus Door Corner #21",
+        category: "Door Corners",
+        specs: "200mm x 260mm x 12.0mm Depth (Universal 4-Corner Applique)",
+        tag: "Baroque Elegance",
+        image: "baroque_corner_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-22",
+        title: "Twin Parrots & Lotus Sanctuary Main Door Panel #22",
+        category: "Center Panels",
+        specs: "400mm x 800mm x 16.0mm Depth (Main Entrance Center Panel)",
+        tag: "Sacred Sanctuary",
+        image: "parrots_panel_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-23",
+        title: "Classical Palmette & Acanthus Door Header Pediment #23",
+        category: "Door Corners",
+        specs: "600mm x 220mm x 18.0mm Depth (Architectural Door Crown Pediment)",
+        tag: "Door Header Pediment",
+        image: "palmette_pediment_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-24",
+        title: "Imperial Baroque Address & Villa Nameplate #24",
+        category: "Nameplates & Welcome Plaques",
+        specs: "400mm x 425mm x 16.0mm Depth (Custom Architectural Villa Plaque)",
+        tag: "Custom Villa Plaque",
+        image: "address_plaque_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-25",
+        title: "Divine Krishna Flute & Mor Pankh Family Nameplate #25",
+        category: "Nameplates & Welcome Plaques",
+        specs: "500mm x 250mm x 18.0mm Depth (Solid Teak Entrance Nameplate)",
+        tag: "Divine Family Nameplate",
+        image: "krishna_nameplate_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      },
+      {
+        id: "BL-26",
+        title: "Baroque Floral Crescent Moon & Rose Medallion #26",
+        category: "Door Corners",
+        specs: "450mm x 450mm x 16.0mm Depth (Architectural Medallion Applique)",
+        tag: "Crescent Moon Applique",
+        image: "crescent_rose_preview.png",
+        formats: [".STL", ".TAP", ".TIFF"]
+      }
+    ];
+
+    function getDesigns() {
+      const saved = localStorage.getItem("bluelotus_designs");
+      if (!saved) return defaultDesigns;
+      try {
+        const parsed = JSON.parse(saved);
+        defaultDesigns.forEach(def => {
+          if (!parsed.some(p => p.id === def.id)) {
+            parsed.push(def);
+          }
+        });
+        return parsed;
+      } catch (e) {
+        return defaultDesigns;
+      }
+    }
+
+    function renderDesigns(filter = 'all') {
+      const grid = document.getElementById("designGrid");
+      const designs = getDesigns();
+      grid.innerHTML = "";
+
+      const filtered = filter === 'all'
+        ? designs
+        : designs.filter(d => d.category.toLowerCase() === filter.toLowerCase());
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 48px;">No designs in this category yet.</div>`;
+        return;
+      }
+
+      filtered.forEach(d => {
+        const card = document.createElement("div");
+        card.className = "design-card";
+
+        const waMsg = encodeURIComponent(`Hi Blue Lotus Studio! I am interested in ${d.id}: "${d.title}". Please share details and payment QR.`);
+        const waLink = `https://wa.me/918317526432?text=${waMsg}`;
+
+        card.innerHTML = `
+          <div class="card-img-wrap">
+            <span class="badge-tag">${d.tag || d.category}</span>
+            <img src="${d.image}" alt="${d.title}" onerror="this.src='door_corner_preview.png'">
+            <div class="format-pills">
+              ${d.formats.map(f => `<span class="format-pill">${f}</span>`).join('')}
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">${d.title}</h3>
+            <div class="card-specs">
+              <span><strong>ID:</strong> ${d.id}</span>
+              <span><strong>Category:</strong> ${d.category}</span>
+              <span><strong>Relief Specs:</strong> ${d.specs}</span>
+            </div>
+            <div class="card-footer">
+              <a href="${waLink}" class="order-wa-btn" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+                Order on WhatsApp
+              </a>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function filterCategory(cat, btn) {
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderDesigns(cat);
+    }
+
+    renderDesigns();
+  </script>
+  <!-- Native Mobile App Bottom Navigation Bar -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Bottom App Navigation">
+    <a href="#top" class="mob-nav-btn active" id="mobNavHomeBtn" onclick="scrollToTop(event)">
+      <div class="mob-nav-icon">
+        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" /></svg>
+      </div>
+      <span class="mob-nav-label">Home</span>
+    </a>
+    <a href="#shelf" class="mob-nav-btn" id="mobNavShelfBtn" onclick="scrollToShelf(event)">
+      <div class="mob-nav-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm10 0a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V5zM3 15a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4zm10 0a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4z" /></svg>
+      </div>
+      <span class="mob-nav-label">Shelf</span>
+    </a>
+    <a href="services.html" class="mob-nav-btn" id="mobNavServicesBtn">
+      <div class="mob-nav-icon">
+        <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" /></svg>
+      </div>
+      <span class="mob-nav-label">Services</span>
+    </a>
+    <a href="https://wa.me/918317526432?text=Hello%20Blue%20Lotus%20Studio!%20I%20want%20to%20inquire%20about%203D%20CNC%20carving%20designs." class="mob-nav-btn" target="_blank" id="mobNavWaBtn">
+      <div class="mob-nav-icon wa-icon-highlight">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z" /></svg>
+      </div>
+      <span class="mob-nav-label">WhatsApp</span>
+    </a>
+  </nav>
+
+
+</body>
+
+</html>
